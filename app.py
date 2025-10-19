@@ -9,7 +9,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-model_path = "C:/Users/IT/Desktop/ml/str pred/saving.pkl"
+model_path = "saving.pkl"
 loaded_model = pickle.load(open(model_path, "rb"))
 
 st.title("🧠 Stroke Prediction App")
@@ -40,3 +40,4 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
