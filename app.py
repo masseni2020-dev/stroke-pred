@@ -1,16 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 17 16:23:25 2025
-
-@author: IT
-"""
-
 import streamlit as st
 import pickle
 import numpy as np
 
-model_path = "saving.pkl"
-loaded_model = pickle.load(open(model_path, "rb"))
+model_path = 'saving.pkl'
+loaded_model = pickle.load(open(model_path, 'rb'))
 
 st.title("🧠 Stroke Prediction App")
 st.write("Enter the patient details to predict the risk of stroke:")
@@ -40,4 +33,5 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
 
