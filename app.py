@@ -1,20 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 17 16:23:25 2025
-
-@author: IT
-"""
-
 import streamlit as st
 import pickle
-
-#model_path = "C:/Users/IT/Desktop/ml/str pred/saving.pkl"
-try:
-    with open('Saving.pkl', "rb") as file:
-        loaded_model=pickle.load(file)
-        print("Model loaded well")
-except:
-    print("Model not load")
+with open('Saving.pkl', "rb") as file:
+    loaded_model=pickle.load(file)
 
 st.title("🧠 Stroke Prediction App")
 st.write("Enter the patient details to predict the risk of stroke:")
@@ -44,4 +31,5 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
 
