@@ -10,12 +10,11 @@ import pickle
 
 #model_path = "C:/Users/IT/Desktop/ml/str pred/saving.pkl"
 try:
-    with open('saving.pkl', "rb") as file:
+    with open('Saving.pkl', "rb") as file:
         loaded_model=pickle.load(file)
         print("Model loaded well")
 except:
     print("Model not load")
-loaded_model = pickle.load(open('saving.pkl', "rb"))
 
 st.title("🧠 Stroke Prediction App")
 st.write("Enter the patient details to predict the risk of stroke:")
@@ -45,3 +44,4 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
