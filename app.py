@@ -15,7 +15,7 @@ try:
         print("Model loaded well")
 except:
     print("Model not load")
-loaded_model = pickle.load(open('saving.pkl', "rb"))
+loaded_model = pickle.load(open('Saving.pkl', "rb"))
 
 st.title("🧠 Stroke Prediction App")
 st.write("Enter the patient details to predict the risk of stroke:")
@@ -45,3 +45,4 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
