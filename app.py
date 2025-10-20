@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-with open('Saving.pkl', "rb") as file:
+with open('Saving.pkl', 'rb') as file:
     loaded_model=pickle.load(file)
 
 st.title("🧠 Stroke Prediction App")
@@ -31,5 +31,6 @@ if st.button("Predict Stroke"):
         st.success("✅ Low risk of stroke")
     else:
         st.error("⚠️ High risk of stroke")
+
 
 
